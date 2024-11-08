@@ -1,21 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
+import Home from './components/Home';
+import Jobs from './components/Jobs';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PostJob from './components/PostJob';
+import SaveJobs from './components/SaveJobs';
+import Discussion from './components/Discussion';
+import ErrorPage from './components/ErrorPage';
+import ApplyJobs from './components/ApplyJobs';
+import Login from './components/Login';
+import Register from './components/Register';
 
 function App() {
   return (
-    <Router>
-       <div>
+    <>
+      <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+          <Route path="/">
+            <Route index element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+
+            <Route path="/home" element={<Home />} />
+            <Route path="/jobs" element={<Jobs />} />
+            <Route path="/post-job" element={<PostJob />} />
+            <Route path="/apply-jobs" element={<ApplyJobs />} />
+            <Route path="/saved-job" element={<SaveJobs />} />
+            <Route path="/discussion" element={<Discussion />} />
+            <Route path="*" element={<ErrorPage />} />
+          </Route>
         </Routes>
-      </div>
-    </Router>
+      </BrowserRouter>
+    </>
   );
 }
 

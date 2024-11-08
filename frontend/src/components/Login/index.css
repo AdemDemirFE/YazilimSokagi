@@ -1,0 +1,80 @@
+/* Scoped styles for the Login page */
+
+/* Container for the login page */
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f4f8;
+}
+
+/* The card containing the form */
+.login-card {
+  width: 400px;
+  padding: 2rem;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  text-align: center;
+}
+
+/* Title for the form */
+.login-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333333;
+  margin-bottom: 1.5rem;
+}
+
+/* Container for input fields */
+.input-container {
+  margin-bottom: 1rem;
+}
+
+/* Styles for input fields */
+.login-input {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.login-input:focus {
+  border-color: #3b82f6;
+}
+
+/* Button styles */
+.login-button {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ffffff;
+  background-color: #3b82f6;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover {
+  background-color: #2563eb;
+}
+
+/* Link to the register page */
+.link-container {
+  font-size: 0.9rem;
+  color: #666666;
+  margin-top: 1rem;
+}
+
+/* Error label styles */
+.error-label {
+  color: #ef4444;
+  font-size: 0.85rem;
+}

@@ -3,24 +3,32 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@sanity/client": "^4.0.1",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "axios": "^1.2.3",
     "frontend": "file:",
+    "html-react-parser": "^3.0.6",
+    "jest-worker": "^29.4.1",
+    "job-portal": "file:",
     "mdb-react-ui-kit": "^9.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
+    "react-icons": "^4.7.1",
     "react-router-dom": "^6.28.0",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.8",
     "styled-components": "^6.1.13",
-    "web-vitals": "^2.1.4",
-    "yazilimsokagifrontend": "file:"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test --transformIgnorePatterns \"node_modules/(?!axios)/\"",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -39,5 +47,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }

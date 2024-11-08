@@ -68,3 +68,34 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### React Bileşen Yapısı:
+- **Fonksiyonel Bileşenler**: Herhangi bir state yönetimi veya lifecycle metodunu ihtiyaç duyan bileşenlerde `useState` ve `useEffect` kullanın.
+- **Dizin Yapısı**: 
+    ```
+    src
+    ├── components
+    │   ├── Header.js
+    │   └── Footer.js
+    ├── pages
+    │   ├── Home.js
+    │   └── Login.js
+    └── services
+        └── api.js
+    ```
+
+### Axios İle API Bağlantıları
+API ile etkileşim için `src/services/api.js` dosyasını kullanabilirsiniz. Örnek kullanım:
+```javascript
+import axios from 'axios';
+
+const api = axios.create({
+  baseURL: 'http://localhost:8080/api'
+});
+
+export const fetchData = () => {
+  return api.get('/data')
+    .then(response => response.data)
+    .catch(error => console.error('API error', error));
+};

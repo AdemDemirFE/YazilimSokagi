@@ -1,0 +1,88 @@
+/* Container for the register form */
+.register-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+  }
+  
+  /* Wrapper for the form */
+  .register-form-wrapper {
+    width: 400px;
+    padding: 2.5rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  /* Title of the form */
+  .register-title {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Labels for the inputs */
+  .register-label {
+    display: block;
+    font-size: 1rem;
+    color: #333333;
+    margin-bottom: 0.5rem;
+    text-align: left;
+  }
+  
+  /* Input fields */
+  .register-input {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  .register-input:focus {
+    border-color: #3b82f6;
+  }
+  
+  /* Button styling */
+  .register-button {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #3b82f6;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .register-button:hover {
+    background-color: #2563eb;
+  }
+  
+  /* Error message for password */
+  .register-field-error {
+    color: #ef4444;
+    font-size: 0.875rem;
+    margin-top: -0.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+  }
+  
+  /* Link to the login page */
+  .register-link-text {
+    font-size: 0.9rem;
+    color: #333333;
+    margin-top: 1.5rem;
+  }
